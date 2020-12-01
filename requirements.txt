@@ -1,0 +1,7 @@
+whitenoise==5.2.0
+Django==3.1.2
+django-cors-headers==3.5.0
+django-crispy-forms==1.9.2
+djangorestframework==3.12.2
+Pillow==7.0.0
+
