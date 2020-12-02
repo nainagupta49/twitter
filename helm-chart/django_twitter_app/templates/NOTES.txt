@@ -1,0 +1,1 @@
+Django based twitter application has been deployed successfully.

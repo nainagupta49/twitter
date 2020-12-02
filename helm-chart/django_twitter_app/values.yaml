@@ -1,0 +1,11 @@
+# Default values for fortanix-secrets-injector.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: django_twitter
+serviceAccount: django_twitter_svc
+replicas: 1
+image:
+  name: nainagupta49/devops_project
+  tag: latest
+  pullPolicy: IfNotPresent

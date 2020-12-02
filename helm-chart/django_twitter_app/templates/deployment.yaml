@@ -1,0 +1,22 @@
+# This example shows the basics and how to inject secrets through environment variables automatically
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "django_twitter_devops.name" . }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ include "django_twitter_devops.name" . }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "django_twitter_devops.name" . }}
+  replicas: {{ .Values.replicas }}
+  template:
+    metadata:
+      name: {{ include "django_twitter_devops.name" . }}
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount }}
+      containers:
+      - name: {{ include "django_twitter_devops.name" . }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        image: 
